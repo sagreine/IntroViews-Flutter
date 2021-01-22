@@ -69,14 +69,14 @@ class PagerIndicator extends StatelessWidget {
     return Column(
       children: <Widget>[
         Expanded(child: Container()),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        Container(height: 100 ,child:
+                ListView(scrollDirection: Axis.horizontal, shrinkWrap: true,          
           children: [
             Transform(
               // used for horizontal transformation
               transform: Matrix4.translationValues(translation, 0.0, 0.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child:  Container(height: 100 ,child:
+                ListView(scrollDirection: Axis.horizontal, shrinkWrap: true,
                 children: bubbles,
               ), //Row
             ),
