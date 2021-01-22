@@ -75,16 +75,17 @@ class PagerIndicator extends StatelessWidget {
             Transform(
               // used for horizontal transformation
               transform: Matrix4.translationValues(translation, 0.0, 0.0),
-              child:  Container(height: 100 ,child:
-                ListView(scrollDirection: Axis.horizontal, shrinkWrap: true,
-                children: bubbles,
-              ), //Row
-            ),
-              ),
-          ],
-        ),
-                  ),//Transform
-      ], //Children
-    ); //Column
+              child:  
+                Container(height: 100 , child:
+                  ListView(scrollDirection: Axis.horizontal, shrinkWrap: true,
+                  children: bubbles,
+                  ),
+                ),
+             ),
+            ],
+           ),
+          ),
+      ], 
+    ); 
   }
 }
