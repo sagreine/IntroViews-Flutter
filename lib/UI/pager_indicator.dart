@@ -66,26 +66,26 @@ class PagerIndicator extends StatelessWidget {
       translation -= BUBBLE_WIDTH * viewModel.slidePercent;
     }
     //UI
-    return Column(
+return Column(
       children: <Widget>[
         Expanded(child: Container()),
         Container(height: 100 ,child:
-                ListView(scrollDirection: Axis.horizontal, shrinkWrap: true,          
+                ListView(scrollDirection: Axis.horizontal, shrinkWrap: true,
           children: [
             Transform(
               // used for horizontal transformation
               transform: Matrix4.translationValues(translation, 0.0, 0.0),
-              child:  
-                Container(height: 100 , child:
-                  ListView(scrollDirection: Axis.horizontal, shrinkWrap: true,
-                  children: bubbles,
-                  ),
+              child: 
+                Container(height: 100 ,child:
+                ListView(scrollDirection: Axis.horizontal, shrinkWrap: true,
+                children: bubbles,
+              ), //
                 ),
-             ),
-            ],
-           ),
-          ),
-      ], 
-    ); 
+            ),
+          ],
+        ), //
+        ),
+      ]
+    );
   }
 }
