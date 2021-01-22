@@ -80,8 +80,10 @@ class PagerIndicator extends StatelessWidget {
                 children: bubbles,
               ), //Row
             ),
+              ),
           ],
-        ), //Transform
+        ),
+                  ),//Transform
       ], //Children
     ); //Column
   }
