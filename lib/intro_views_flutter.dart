@@ -20,7 +20,7 @@ class IntroViewsFlutter extends StatefulWidget {
   /// List of [PageViewModel] to display
   final List<PageViewModel> pages;
   
-  final activePageIndex;
+  final int activePageIndex;
 
   /// Callback on Done Button Pressed
   final VoidCallback onTapDoneButton;
