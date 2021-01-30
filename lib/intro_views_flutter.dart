@@ -19,6 +19,8 @@ import 'package:intro_views_flutter/UI/page.dart' as IntoUIPage;
 class IntroViewsFlutter extends StatefulWidget {
   /// List of [PageViewModel] to display
   final List<PageViewModel> pages;
+  
+  final activePageIndex;
 
   /// Callback on Done Button Pressed
   final VoidCallback onTapDoneButton;
@@ -108,6 +110,7 @@ class IntroViewsFlutter extends StatefulWidget {
     this.pageButtonFontFamily,
     this.onTapSkipButton,
     this.onTapNextButton,
+    this.activePageIndex,
     this.pageButtonsColor,
     this.doneText = const Text("DONE"),
     this.nextText = const Text("NEXT"),
@@ -135,7 +138,7 @@ class _IntroViewsFlutterState extends State<IntroViewsFlutter>
   AnimatedPageDragger
       animatedPageDragger; //When user stops dragging then by using this page automatically drags.
 
-  int activePageIndex = 0; //active page index
+  int _activePageIndex = widget.activePageIndex; //active page index
   int nextPageIndex = 0; //next page index
   SlideDirection slideDirection = SlideDirection.none; //slide direction
   double slidePercent = 0.0; //slide percentage (0.0 to 1.0)
